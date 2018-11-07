@@ -7,3 +7,18 @@ We connected frontend and backend parts. The app now can login and signup. Upon 
 * Le Cuong: 
 * Zak King: 
 * Alexander Muyshondt: 
+
+# How to run the app.
+
+# Individual (Artifact References and Proof of Work)
+Andrew Hyatt
+
+Danh Pham
+
+Le Cuong
+
+
+Zak King
+
+
+Alexander Muyshondt
