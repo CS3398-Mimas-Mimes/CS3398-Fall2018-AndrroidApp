@@ -2,7 +2,7 @@
 
 # Status of Project
 We connected frontend and backend parts. The app now can login and signup. Upon signing up, new users will recieve a confirmation email. On the frontend we also added a user, menu, information and favorites page. Next steps for our team members include:
-* Andrew Hyatt: 
+* Andrew Hyatt: Assisting Danh with integrating orders and payments to our application, as well as continuing customer reward functionality. Will also attempt to improve the email that is sent to users that register for an account to include more information and not be sent to spam.
 * Danh Pham: Make the database for orders and payments, and connects those databases with Android App
 * Le Cuong: Design the Homepage and Menu, link these bottons to the logging page
 * Zak King: 
