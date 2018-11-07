@@ -15,6 +15,10 @@ We connected frontend and backend parts. The app now can login and signup. Upon 
 
 # Individual (Artifact References and Proof of Work)
 Andrew Hyatt
+- I worked on creating a table for storing menu items in the database. 
+- On my aHyatt-menu-db branch, I created <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/aHyatt-menu-db/app/src/main/java/com/example/danhpham/group2/Menu.java">Menu.java</a> to retrieve these menu items from the database. 
+- On my aHyatt-email branch, I updated <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/aHyatt-email/app/src/main/java/com/example/danhpham/group2/SignUp.java">SignUp.java</a> to send an email when a new user signs up for our app (this branch has been merged to master). 
+- On my aHyatt-customer-rewards branch, I've added a <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/tree/aHyatt-customer-rewards/app/src/main/java/com/example/danhpham/group2/reward">reward package</a> which includes CurrentRewards.java (a file which tracks the user's current rewards), Reward.java (a parent class for objects of type Reward), DiscountReward.java (a sub-class that inherits from Reward class, which introduces basic discount functionality), and IRewardable.java (which is an interface for applying a customer's reward). 
 
 Danh Pham
 - I worked on database and contribute to write the login and signup php file to receive the login and signup information from the android app. Search those information in database (with login) and Fill in those signup information.
