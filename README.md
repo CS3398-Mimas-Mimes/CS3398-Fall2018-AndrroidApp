@@ -4,7 +4,7 @@
 We connected frontend and backend parts. The app now can login and signup. Upon signing up, new users will recieve a confirmation email. On the frontend we also added a user, menu, information and favorites page. Next steps for our team members include:
 * Andrew Hyatt: 
 * Danh Pham: Make the database for orders and payments, and connects those databases with Android App
-* Le Cuong: 
+* Le Cuong: make the Homepage and Menu, link these bottons to the logging page
 * Zak King: 
 * Alexander Muyshondt: 
 
