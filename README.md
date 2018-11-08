@@ -6,7 +6,7 @@ We connected frontend and backend parts. The app now can login and signup. Upon 
 * Danh Pham: Make the database for orders and payments, and connects those databases with Android App
 * Le Cuong: Design the Homepage and Menu, link these bottons to the logging page
 * Zak King: Polish GUI and work with backend to implement all features layed out in the front end pages. 
-* Alexander Muyshondt: 
+* Alexander Muyshondt: Polish up user profile page and help connect existing frontend with backend for sprint 3.
 
 # How to run the app.
  - Download the file <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/tree/master/apk">Mimas_11_07.apk</a> to your android phones.
