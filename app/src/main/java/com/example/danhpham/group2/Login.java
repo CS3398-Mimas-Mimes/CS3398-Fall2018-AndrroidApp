@@ -79,7 +79,7 @@ public class Login extends AppCompatActivity {
 
     public void setbLogin(){
         //StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.101/loginapp/login.php",
-        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.000webhostapp.com/login_online.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/login_online.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

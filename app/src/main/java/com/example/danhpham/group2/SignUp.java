@@ -60,7 +60,7 @@ public class SignUp extends Activity {
 
     public void setSignup(){
         //StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.101/loginapp/login.php",
-        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.000webhostapp.com/register_online_danh.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/register_online_danh.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -98,7 +98,7 @@ public class SignUp extends Activity {
     }
 
     protected void sendEmail(final String email) {
-        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.000webhostapp.com/email_online.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/email_online.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
