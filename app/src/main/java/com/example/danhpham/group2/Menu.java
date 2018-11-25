@@ -14,6 +14,8 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import android.util.Log;
+
 public class Menu extends Activity {
 
     Button bmenu;
