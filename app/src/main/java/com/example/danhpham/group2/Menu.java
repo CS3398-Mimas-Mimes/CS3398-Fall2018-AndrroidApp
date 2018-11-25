@@ -20,6 +20,7 @@ public class Menu extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.i("Menu: onCreate", "Starting onCreate()");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
@@ -28,13 +29,16 @@ public class Menu extends Activity {
         bmenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i("Menu: onClick", "Menu button clicked");
                 getMenu();
             }
         });
     }
 
     public void getMenu() {
-        String url = "http://dmp131.000webhostapp.com/menu_online.php";
+        Log.i("Menu: getMenu", "Starting to grab menu information...");
+        String url = "http://dmp131.tech.com/menu_online.php";
+        /*
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>()
                 {
@@ -47,6 +51,26 @@ public class Menu extends Activity {
                                     Toast.LENGTH_SHORT).show();
                         }
                         else {
+                            Toast.makeText(getApplicationContext(), "Found no menu items in db",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                },null);
+                */
+        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,
+                new Response.Listener<JSONArray>()
+                {
+                    @Override
+                    public void onResponse(JSONArray response) {
+                        // display response
+                        
+                        if (response.size() > 0) {
+                            Log.i("Menu: getMenu", "Response is not empty");
+                            Toast.makeText(getApplicationContext(), String.format("Found %d menu item(s) in db", response.length()),
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            Log.i("Menu: getMenu", "Response is empty");
                             Toast.makeText(getApplicationContext(), "Found no menu items in db",
                                     Toast.LENGTH_SHORT).show();
                         }
