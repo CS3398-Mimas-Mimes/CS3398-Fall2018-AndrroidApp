@@ -61,26 +61,32 @@ public class Menu extends Activity {
                 },null);
                 */
         Log.i("Menu: getMenu", "Reached before request successfully");
-        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONArray>()
-                {
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        // display response
-                        
-                        if (response.size() > 0) {
-                            Log.i("Menu: getMenu", "Response is not empty");
-                            Toast.makeText(getApplicationContext(), String.format("Found %d menu item(s) in db", response.length()),
+        try {
+            JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,
+                    new Response.Listener<JSONArray>()
+                    {
+                        @Override
+                        public void onResponse(JSONArray response) {
+                            // display response
+                            String responseMsg = String.format("Response from server: %s\n", response.toString());
+                            Log.i("Menu: getMenu", responseMsg);
+                            if (response.size() > 0) {
+                                Log.i("Menu: getMenu", "Response is not empty");
+                                Toast.makeText(getApplicationContext(), String.format("Found %d menu item(s) in db", response.length()),
                                     Toast.LENGTH_SHORT).show();
-                        }
-                        else {
-                            Log.i("Menu: getMenu", "Response is empty");
-                            Toast.makeText(getApplicationContext(), "Found no menu items in db",
+                            }
+                            else {
+                                Log.i("Menu: getMenu", "Response is empty");
+                                Toast.makeText(getApplicationContext(), "Found no menu items in db",
                                     Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
-                },null);
-        Volley.newRequestQueue(this).add(request);
-        Log.i("Menu: getMenu", "Successfully added request to queue");
+                    },null);
+            Volley.newRequestQueue(this).add(request);
+            Log.i("Menu: getMenu", "Successfully added request to queue");    
+        } catch (Exception e) {
+            Log.i("Menu: catch block", "Unable to process JSONArray request");
+            e.printStackTrace();
+        }
     }
 }
