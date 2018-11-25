@@ -70,7 +70,7 @@ public class Menu extends Activity {
                             // display response
                             String responseMsg = String.format("Response from server: %s\n", response.toString());
                             Log.i("Menu: getMenu", responseMsg);
-                            if (response.size() > 0) {
+                            if (response.length() > 0) {
                                 Log.i("Menu: getMenu", "Response is not empty");
                                 Toast.makeText(getApplicationContext(), String.format("Found %d menu item(s) in db", response.length()),
                                     Toast.LENGTH_SHORT).show();
