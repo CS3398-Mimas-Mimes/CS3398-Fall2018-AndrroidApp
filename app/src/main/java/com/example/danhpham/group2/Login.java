@@ -28,6 +28,8 @@ import java.net.ResponseCache;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.preference.PreferenceManager;
+
 public class Login extends AppCompatActivity {
 
     private TextView mTextMessage;
@@ -85,6 +87,13 @@ public class Login extends AppCompatActivity {
                     public void onResponse(String response) {
                         //Toast.makeText(getApplicationContext(), "this is reponses" + response, Toast.LENGTH_SHORT).show();
                         if (response.contains("1")){
+                            // save customer info to session for later use -- Added Code
+                            SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                            SharedPreferences.Editor editor = settings.edit();
+                            editor.putString("email", this.etEmail.toString());
+                            editor.apply();
+                            // info should be saved (and committed) by this code (try logging on user info button click)
+                            
                             startActivity(new Intent(getApplicationContext(),HomePageActivity.class));
                         }else{
                             Toast.makeText(getApplicationContext(), "Wrong username or password",
