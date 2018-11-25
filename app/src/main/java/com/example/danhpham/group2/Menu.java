@@ -25,6 +25,7 @@ public class Menu extends Activity {
         setContentView(R.layout.activity_home_page);
 
         bmenu = (Button) findViewById(R.id.menuText);
+        Log.i("Menu: onCreate", "Menu button initialized");
 
         bmenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +58,7 @@ public class Menu extends Activity {
                     }
                 },null);
                 */
+        Log.i("Menu: getMenu", "Reached before request successfully");
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONArray>()
                 {
@@ -77,5 +79,6 @@ public class Menu extends Activity {
                     }
                 },null);
         Volley.newRequestQueue(this).add(request);
+        Log.i("Menu: getMenu", "Successfully added request to queue");
     }
 }
