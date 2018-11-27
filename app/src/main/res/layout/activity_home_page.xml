@@ -22,6 +22,7 @@
             android:background="#8d734a"
             android:ems="10"
             android:linksClickable="true"
+            android:onClick="goToMenu"
             android:text="Menu" />
 
 
@@ -45,6 +46,7 @@
             android:ems="10"
             android:linksClickable="true"
             android:longClickable="true"
+            android:onClick="goToInfo"
             android:text="INFO" />
 
 
