@@ -44,5 +44,19 @@ public class HomePageActivity extends AppCompatActivity {
         Intent startLogin = new Intent(this, Login.class);
         startActivity(startLogin);
     }
+     public void goToMenu(View view){
+        Intent startMenu = new Intent(this, Menu.class);
+        startActivity(startMenu);
+    }
+
+    public void goToUser(View view){
+        Intent startUser = new Intent(this, User.class);
+        startActivity(startUser);
+    }
+
+    public void goToInfo(View view){
+        Intent startInfo = new Intent(this, Info.class);
+        startActivity(startInfo);
+    }
 
 }
