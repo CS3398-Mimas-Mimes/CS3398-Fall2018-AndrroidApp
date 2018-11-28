@@ -1,4 +1,4 @@
-package com.example.zakking.softwareengproject;
+package com.example.danhpham.group2;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
