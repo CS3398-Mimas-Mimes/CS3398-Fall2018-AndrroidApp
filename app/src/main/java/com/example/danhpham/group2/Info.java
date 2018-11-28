@@ -1,4 +1,4 @@
-package com.example.zakking.softwareengproject;
+package com.example.danhpham.group2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
