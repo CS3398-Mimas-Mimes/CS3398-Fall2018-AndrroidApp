@@ -11,6 +11,7 @@ import android.content.Intent;
 public class HomePageActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+    String id;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -38,6 +39,9 @@ public class HomePageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         mTextMessage = (TextView) findViewById(R.id.message);
+
+        //Intent intent = getIntent();
+        //id = savedInstanceState.getExtras().getString("id");
     }
 
     public void goToLogin(View view){
@@ -51,6 +55,7 @@ public class HomePageActivity extends AppCompatActivity {
 
     public void goToUser(View view){
         Intent startUser = new Intent(this, User.class);
+        startUser.putExtra("id", id);
         startActivity(startUser);
     }
 

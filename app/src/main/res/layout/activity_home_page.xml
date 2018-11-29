@@ -34,7 +34,8 @@
             android:background="#8d734a"
             android:ems="10"
             android:linksClickable="true"
-            android:text="Reserver" />
+            android:onClick="goToUser"
+            android:text="My Account" />
 
 
         <Button

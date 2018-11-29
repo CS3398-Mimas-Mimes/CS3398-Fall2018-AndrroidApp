@@ -28,11 +28,17 @@ import java.net.ResponseCache;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.support.v4.content.LocalBroadcastManager;
+
 public class Login extends AppCompatActivity {
 
     private TextView mTextMessage;
     Button bLogin;
     EditText etEmail, etPassword;
+    String id;
+    //SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -79,12 +85,27 @@ public class Login extends AppCompatActivity {
 
     public void setbLogin(){
         //StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.101/loginapp/login.php",
-        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/login_online.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/login_online_ahyatt_test.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         //Toast.makeText(getApplicationContext(), "this is reponses" + response, Toast.LENGTH_SHORT).show();
                         if (response.contains("1")){
+                            // use existing request example to grab user id (as string)
+                            // use Toast message to log values grabbed for id
+
+                            String arr[] = response.split(" ");
+                            id = arr[1];
+                            Toast.makeText(getApplicationContext(), String.format("Id From Login: %s", id), Toast.LENGTH_LONG).show();
+
+                            //SharedPreferences.Editor editor = prefs.edit();
+                            //editor.putString("id", id);
+                            //editor.putString("email", etEmail.getText().toString());
+                            //editor.commit();
+
+                            // Trying second method
+                            //sendId(id);
+
                             startActivity(new Intent(getApplicationContext(),HomePageActivity.class));
                         }else{
                             Toast.makeText(getApplicationContext(), "Wrong username or password",
@@ -111,9 +132,22 @@ public class Login extends AppCompatActivity {
 
 
     }
+/*
+    public void sendId(String id) {
+        Toast.makeText(getApplicationContext(), "In sendId method", Toast.LENGTH_LONG).show();
+        //Intent i = new Intent(this, User.class);
+        //i.putExtra("id",id);
+
+        Intent intent = new Intent("IDINTENT").putExtra("id", id);
+        Toast.makeText(getApplicationContext(), "Made new intent", Toast.LENGTH_LONG).show();
+        LocalBroadcastManager.getInstance(Login.this).sendBroadcast(intent);
+        Toast.makeText(getApplicationContext(), "Made LocalBroadCastManager", Toast.LENGTH_LONG).show();
+    }
+*/
 
     public void goToMain(View view) {
         Intent startMain = new Intent(this, HomePageActivity.class);
+        startMain.putExtra("id", id);
         startActivity(startMain);
     }
     public void goToSignup(View view) {
