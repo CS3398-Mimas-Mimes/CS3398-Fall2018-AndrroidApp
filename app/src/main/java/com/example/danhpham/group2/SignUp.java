@@ -1,11 +1,13 @@
 package com.example.danhpham.group2;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.os.Message;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -16,6 +18,11 @@ import com.android.volley.toolbox.Volley;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.*;
+import java.net.PasswordAuthentication;
+import javax.sql.*;
+
+import android.content.pm.PackageInstaller.Session;
 
 public class SignUp extends Activity {
 
@@ -41,6 +48,7 @@ public class SignUp extends Activity {
             @Override
             public void onClick(View v) {
                 setSignup();
+                sendEmail(email.getText().toString());
             }
         });
 
@@ -52,7 +60,7 @@ public class SignUp extends Activity {
 
     public void setSignup(){
         //StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.101/loginapp/login.php",
-        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.000webhostapp.com/register_online_danh.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/register_online_danh.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -87,6 +95,34 @@ public class SignUp extends Activity {
         Volley.newRequestQueue(this).add(request);
 
 
+    }
+
+    protected void sendEmail(final String email) {
+        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/email_online.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        //Toast.makeText(getApplicationContext(), "this is reponses" + response, Toast.LENGTH_SHORT).show();
+                        if (!response.contains("1")){
+                            Toast.makeText(getApplicationContext(), "Unable to send confirmation to email",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<>();
+                params.put("email",email);
+                return params;
+            }
+        };
+        Volley.newRequestQueue(this).add(request);
     }
 
 

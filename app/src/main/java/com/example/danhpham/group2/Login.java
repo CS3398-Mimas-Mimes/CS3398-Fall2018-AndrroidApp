@@ -1,6 +1,7 @@
 package com.example.danhpham.group2;
 
 import android.content.Intent;
+import android.hardware.usb.UsbRequest;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -79,16 +80,31 @@ public class Login extends AppCompatActivity {
 
     public void setbLogin(){
         //StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.101/loginapp/login.php",
-        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.000webhostapp.com/login_online.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/login_online.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        /*
                         //Toast.makeText(getApplicationContext(), "this is reponses" + response, Toast.LENGTH_SHORT).show();
                         if (response.contains("1")){
-                            startActivity(new Intent(getApplicationContext(),HomePageActivity.class));
+                            startActivity(new Intent(getApplicationContext(),User.class));
                         }else{
                             Toast.makeText(getApplicationContext(), "Wrong username or password",
                                     Toast.LENGTH_SHORT).show();
+                        }
+                        */
+                        if (response.equals("0")){
+                            Toast.makeText(getApplicationContext(), "Wrong username or password",
+                                    Toast.LENGTH_SHORT).show();
+                        }else{
+                            //startActivity(new Intent(getApplicationContext(),User.class));
+
+                            Intent i = new Intent(getApplicationContext(),User.class);
+                            String[] split = response.split("\\s+");
+                            i.putExtra("email",  split[0]);
+                            i.putExtra("phone",  split[1]);
+                            startActivity(i);
+
                         }
 
 
