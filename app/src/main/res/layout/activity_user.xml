@@ -7,24 +7,24 @@
     android:layout_height="fill_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    android:background="#501214"
+    android:background="#dd4b39"
     >
     <!-- Colored gradient background -->
 
+
+    <!-- Credit Card text information -->
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/user_credit_card"
         android:layout_width="273dp"
         android:layout_height="44dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
-        android:textColor="#8d734a"
         android:inputType="textPersonName"
-        android:text="12341233412341234"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/user_mobile_number" />
 
     <TextView
         android:id="@+id/textView2"
@@ -32,8 +32,10 @@
         android:layout_height="46dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="20dp"
-        android:textColor="#8d734a"
         android:text="Credit Card"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -46,9 +48,11 @@
         android:contentDescription="TODO"
         android:src="@drawable/profile_picture"
         app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <!-- Circle Profile Picture -->
 
@@ -57,28 +61,29 @@
         android:id="@+id/textView"
         android:layout_width="81dp"
         android:layout_height="45dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="6dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="20dp"
         android:text="Email"
-        android:textColor="#8d734a"
+        android:textAlignment="center"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintEnd_toStartOf="@+id/user_email"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+    <!-- Email box information -->
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/user_email"
         android:layout_width="271dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="#8d734a"
-        android:text="email@example.com"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/user_mobile_number"
         app:layout_constraintHorizontal_bias="0.858"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -90,40 +95,75 @@
         android:layout_height="46dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="20dp"
-        android:textColor="#8d734a"
         android:text="Mobile number"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <!-- Mobile Number information -->
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/user_mobile_number"
         android:layout_width="273dp"
         android:layout_height="44dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
         android:ems="10"
-        android:textColor="#8d734a"
         android:inputType="textPersonName"
-        android:text="123-456-7891"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/user_email" />
 
+    <!-- Favorites Button -->
     <Button
-        android:id="@+id/button"
+        android:id="@+id/user_favorites_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:text="Favorites"
+        android:layout_marginBottom="8dp"
+        android:background="#8d734a"
         android:onClick="goToOrders"
+        android:text="Favorites"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.27"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87"
-        android:background="#8d734a"/>
+        app:layout_constraintTop_toBottomOf="@+id/user_credit_card"
+        app:layout_constraintVertical_bias="0.509" />
+
+    <!-- Edit Profile button -->
+    <Button
+        android:id="@+id/edit_user_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#8d734a"
+        android:text="Edit Profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/user_favorites_button"
+        app:layout_constraintTop_toBottomOf="@+id/user_credit_card" />
+
+    <!-- Save Profile button -->
+    <Button
+        android:id="@+id/save_user_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/edit_user_profile"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:background="#8d734a"
+        android:text="Save profile"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_user_profile" />
 
 </android.support.constraint.ConstraintLayout>
