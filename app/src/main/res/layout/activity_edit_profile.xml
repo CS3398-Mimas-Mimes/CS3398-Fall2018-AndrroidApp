@@ -115,8 +115,7 @@
         android:background="#8d734a"
         android:text="Save profile"
         android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_user_profile" />
+        android:textStyle="bold" />
+
+    </LinearLayout>
+</ScrollView>

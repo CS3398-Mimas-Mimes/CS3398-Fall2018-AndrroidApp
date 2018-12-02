@@ -150,22 +150,6 @@
         app:layout_constraintStart_toEndOf="@+id/user_favorites_button"
         app:layout_constraintTop_toBottomOf="@+id/user_credit_card" />
 
-    <!-- Save Profile button -->
-    <Button
-        android:id="@+id/save_user_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/edit_user_profile"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="8dp"
-        android:background="#8d734a"
-        android:text="Save profile"
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_user_profile" />
 
 </android.support.constraint.ConstraintLayout>
 

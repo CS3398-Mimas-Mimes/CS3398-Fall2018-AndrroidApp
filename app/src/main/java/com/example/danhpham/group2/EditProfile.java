@@ -24,7 +24,7 @@ import java.util.Map;
 
 public class EditProfile extends AppCompatActivity {
 
-    EditText fname, lname, username, email, mobileNumber, creditCard;
+    EditText fname, lname, username, email, mobileNumber;
     Button saveProfile;
 
     @Override
@@ -33,8 +33,8 @@ public class EditProfile extends AppCompatActivity {
         setContentView(R.layout.activity_edit_profile);
 
         // Connecting edit text variable to framework
-        fname = (EditText) findViewById(R.id.edit_fname);
-        lname = (EditText) findViewById(R.id.edit_lname);
+        fname = (EditText) findViewById(R.id.edit_fName);
+        lname = (EditText) findViewById(R.id.edit_lName);
         username = (EditText) findViewById(R.id.edit_userName);
         email = (EditText) findViewById(R.id.user_email);
         mobileNumber = (EditText) findViewById(R.id.edit_phoneNumber);
@@ -45,7 +45,7 @@ public class EditProfile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 editProfile();
-                sendEmail(email.getText().toString());
+                //sendEmail(email.getText().toString());
             }
         });
 
