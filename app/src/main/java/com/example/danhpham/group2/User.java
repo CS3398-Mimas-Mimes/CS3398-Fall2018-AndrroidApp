@@ -40,6 +40,22 @@ public class User extends AppCompatActivity {
         favorites = (Button) findViewById(R.id.user_favorites_button);
         editProfile = (Button) findViewById(R.id.edit_user_profile);
 
+        // Connecting button variable to frame work
+        favorites.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //goToOrders();
+            }
+        });
+
+        // Connecting button variable to frame work
+        editProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //editProfile();
+            }
+        });
+
     }
 
     public void goToOrders(View view){
@@ -47,9 +63,9 @@ public class User extends AppCompatActivity {
         startActivity(startOrders);
     }
 
-    public void goToEditProfile(View view) {
-        Intent startEditProfile = new Intent(this, EditProfile.class);
-        startActivity(startEditProfile);
+    public void editProfile(View view){
+        Intent startEdit = new Intent(this, UserEdit.class);
+        startActivity(startEdit);
     }
 
 }

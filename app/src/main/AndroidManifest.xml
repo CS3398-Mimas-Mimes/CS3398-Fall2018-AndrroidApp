@@ -43,9 +43,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".UserEdit"
+            android:label="@string/app_name">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".User"
             android:label="@string/app_name" />
-        <activity android:name=".userPayment" />
+        <!--<activity android:name=".userPayment" />-->
         <activity android:name=".userOrders" />
         <activity android:name=".Info"></activity>
     </application>
