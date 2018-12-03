@@ -57,8 +57,8 @@ public class HomePageActivity extends AppCompatActivity {
 
     public void goToUser(View view){
         Intent startUser = new Intent(this, User.class);
-        Toast.makeText(getApplicationContext(), String.format("Passing in ID to User: %s", id), Toast.LENGTH_LONG).show();
-        startUser.putExtra("id", id);
+        //Toast.makeText(getApplicationContext(), String.format("Passing in ID to User: %s", id), Toast.LENGTH_LONG).show();
+        //startUser.putExtra("id", id);
         startActivity(startUser);
     }
 
@@ -67,7 +67,7 @@ public class HomePageActivity extends AppCompatActivity {
         startActivity(startInfo);
     }
 
-    public String getId() {
+    public static String getId() {
         return id;
     }
 

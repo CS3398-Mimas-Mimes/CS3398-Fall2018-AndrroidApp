@@ -28,7 +28,7 @@ public class userOrders extends AppCompatActivity {
     String id;
     String orderList;
 
-    RequestQueue requestQueue;
+    //RequestQueue requestQueue;
     TextView results;
 
     @Override
@@ -39,7 +39,7 @@ public class userOrders extends AppCompatActivity {
         Intent intent = getIntent();
         id = intent.getStringExtra("id");
 
-        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/display_orders.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/display_orders_danh.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -81,7 +81,8 @@ public class userOrders extends AppCompatActivity {
             }
         };
 
-        this.requestQueue.add(request);
+        Volley.newRequestQueue(this).add(request);
+        //this.requestQueue.add(request);
 
     }
 }

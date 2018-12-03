@@ -21,9 +21,13 @@ public class User extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
 
-        Intent intent = getIntent();
-        id = intent.getStringExtra("id");
+        //Intent intent = getIntent();
+        //id = intent.getStringExtra("id");
         //Toast.makeText(getApplicationContext(), String.format("ID IN USER CLASS: %", id), Toast.LENGTH_SHORT).show();
+        id = HomePageActivity.getId();
+        if (id.equals(null)) {
+            Toast.makeText(getApplicationContext(), "ID is null", Toast.LENGTH_LONG).show();
+        }
 
     }
 
