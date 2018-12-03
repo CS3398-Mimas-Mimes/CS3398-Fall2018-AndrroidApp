@@ -31,7 +31,7 @@ import com.android.volley.toolbox.StringRequest;
 public class User extends AppCompatActivity {
 
     String id;
-    TextView email, phone, creditCard;
+    TextView email, phone, name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,14 +43,14 @@ public class User extends AppCompatActivity {
         //Toast.makeText(getApplicationContext(), String.format("ID IN USER CLASS: %", id), Toast.LENGTH_SHORT).show();
         id = HomePageActivity.getId();
 
-        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/customer_info.php",
+        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/customer_info_danh_test.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
                         try {
 
-                            Toast.makeText(getApplicationContext(), String.format("Response: %s", response), Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(), String.format("Response: %s", response), Toast.LENGTH_LONG).show();
                             String arr[] = response.split(",");
 
 
@@ -63,6 +63,7 @@ public class User extends AppCompatActivity {
                             //String card_str = jsonObject.getString("price");
                             //String card_str = "12341233412341234"; // hard-coded since no card field exists in db
 
+                            /*
                             String email_str = arr[6];
                             email_str = email_str.replace("email", "");
                             email_str = email_str.replace(":", "");
@@ -76,10 +77,16 @@ public class User extends AppCompatActivity {
                             phoneNum = phoneNum.replace("\"", "");
                             phoneNum = phoneNum.replace("}", "");
 
-                            email = (TextView) findViewById(R.id.editText2);
-                            email.setText(email_str);
-                            phone = (TextView) findViewById(R.id.editText3);
-                            phone.setText(phoneNum);
+                            */
+                            // Try version 2
+                            name = (TextView) findViewById(R.id.textView10);
+                            name.setText(arr[1]);
+
+                            email = (TextView) findViewById(R.id.textView14);
+                            email.setText(arr[0]);
+                            phone = (TextView) findViewById(R.id.textView12);
+                            phone.setText(arr[2]);
+
                             //creditCard = (TextView) findViewById(R.id.editText4);
                             //creditCard.setText(card_str);
 
