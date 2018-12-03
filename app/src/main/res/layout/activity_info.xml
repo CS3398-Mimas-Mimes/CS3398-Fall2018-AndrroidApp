@@ -5,7 +5,7 @@
     android:id="@+id/coordinatorLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#501214"
+    android:background="#FF4447"
     android:fitsSystemWindows="true"
     android:paddingBottom="50dp"
     tools:context=".Info">

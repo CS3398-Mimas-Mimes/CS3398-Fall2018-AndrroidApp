@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.content.Intent;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,8 +22,12 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import java.util.ArrayList;
+import android.widget.Button;
 
 public class Menu extends AppCompatActivity {
+
+    Button bSubmit;
 
     String JsonURL = "http://dmp131.tech/menu_online.php";
     String data = "Current Menu:\n\n\n";
@@ -92,6 +97,57 @@ public class Menu extends AppCompatActivity {
         //this.results.setText(data);
         this.requestQueue.add(request);
 
+        bSubmit = findViewById(R.id.btn_confirm);
+
+        bSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setbConfirmPage();
+            }
+        });
+
     }
 
+    public void setbConfirmPage(){
+        CheckBox burger = findViewById(R.id.Hamburger);
+        CheckBox chickenStrips = findViewById(R.id.chickenStrips);
+        CheckBox loadedFries = findViewById(R.id.loadedFries);
+        CheckBox vanillaShake = findViewById(R.id.vanillaShake);
+        //Intent i=new Intent(this, cart.class);
+        int size = 0;
+        String[] Orders = new String[4];
+        //ArrayList<String> orders = new ArrayList<>();
+        if(burger.isChecked()) {
+            //orders.add("Hamburger");
+            Orders[0] = "Hamburger";
+            size++;
+        }
+        if(chickenStrips.isChecked()) {
+            //orders.add("Chicken Strips");
+            Orders[1] = "Chicken Strips";
+            size++;
+        }
+        if(loadedFries.isChecked()) {
+            //orders.add("Loaded Fries");
+            Orders[2] = "Loaded Fries";
+            size++;
+        }
+        if(vanillaShake.isChecked()) {
+            //orders.add("Vanilla Shake");
+            Orders[3] = "Vanilla Shake";
+        }
+        Intent i = new Intent(getApplicationContext(),cart.class);
+        //Bundle bundle = new Bundle();
+        System.out.println(Orders); //for reference
+
+        for(int inc = 0; inc < Orders.length; inc++){
+            if (Orders[inc] != null){
+                i.putExtra("order", Orders[inc]);
+            }
+        }
+        startActivity(i);
+        System.out.println(Orders); //for reference
+        Intent startCart = new Intent(this, cart.class);
+        startActivity(startCart);
+    }
 }

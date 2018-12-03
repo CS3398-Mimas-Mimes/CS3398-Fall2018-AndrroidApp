@@ -5,9 +5,9 @@
     android:id="@+id/constraintLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#501214"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
+    android:background="#FF4447"
     tools:layout_editor_absoluteY="81dp">
     <!-- Colored gradient background -->
 
