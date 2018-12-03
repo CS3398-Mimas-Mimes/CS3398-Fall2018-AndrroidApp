@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#501214"
+    android:background="#FF4447"
     android:fitsSystemWindows="true"
     android:paddingBottom="50dp">
 
@@ -117,6 +117,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textAppearance="@android:style/TextAppearance" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!--  Confirm Password Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/confirm_password"
+                style="@style/Widget.AppCompat.AutoCompleteTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm Password"
                 android:inputType="textPassword"
                 android:padding="10dp"
                 android:textAppearance="@android:style/TextAppearance" />

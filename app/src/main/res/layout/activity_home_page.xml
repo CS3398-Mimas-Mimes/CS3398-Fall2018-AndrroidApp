@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#501214"
+    android:background="#FF4447"
     android:fitsSystemWindows="true"
     android:paddingBottom="50dp">
 
@@ -22,18 +22,20 @@
             android:background="#8d734a"
             android:ems="10"
             android:linksClickable="true"
+            android:onClick="goToMenu"
             android:text="Menu" />
 
 
         <Button
-            android:id="@+id/reserText"
+            android:id="@+id/UserText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="36dp"
             android:background="#8d734a"
             android:ems="10"
+            android:onClick="goToUser"
             android:linksClickable="true"
-            android:text="Reserver" />
+            android:text="User" />
 
 
         <Button
@@ -43,6 +45,7 @@
             android:layout_marginBottom="36dp"
             android:background="#8d734a"
             android:ems="10"
+            android:onClick="goToInfo"
             android:linksClickable="true"
             android:longClickable="true"
             android:text="INFO" />

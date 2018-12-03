@@ -7,7 +7,7 @@
     android:layout_height="fill_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    android:background="#501214"
+    android:background="#FF4447"
     >
     <!-- Colored gradient background -->
 
