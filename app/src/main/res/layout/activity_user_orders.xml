@@ -26,5 +26,16 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/orders"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingTop="20dp"
+            android:textColor="#8d734a"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 </ScrollView>
