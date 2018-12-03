@@ -78,14 +78,21 @@ public class Login extends AppCompatActivity {
     }
 
     public void setbLogin(){
+        String url = "http://dmp131.tech/login_online_ahyatt_test.php";
         //StringRequest request = new StringRequest(Request.Method.POST, "http://192.168.0.101/loginapp/login.php",
-        StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.000webhostapp.com/login_online.php",
+        StringRequest request = new StringRequest(Request.Method.POST, url,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         //Toast.makeText(getApplicationContext(), "this is reponses" + response, Toast.LENGTH_SHORT).show();
                         if (response.contains("1")){
-                            startActivity(new Intent(getApplicationContext(),HomePageActivity.class));
+                            // Response returns "1 {id}"
+                            String arr[] = response.split(" ");
+                            String id = arr[1];
+                            Intent startMain = new Intent(getApplicationContext(), HomePageActivity.class);
+                            startMain.putExtra("id", id);
+                            startActivity(startMain);
+                            //startActivity(new Intent(getApplicationContext(),HomePageActivity.class));
                         }else{
                             Toast.makeText(getApplicationContext(), "Wrong username or password",
                                     Toast.LENGTH_SHORT).show();

@@ -35,7 +35,7 @@
             android:ems="10"
             android:onClick="goToUser"
             android:linksClickable="true"
-            android:text="User" />
+            android:text="My Account" />
 
 
         <Button
@@ -48,6 +48,7 @@
             android:onClick="goToInfo"
             android:linksClickable="true"
             android:longClickable="true"
+            android:onClick="goToInfo"
             android:text="INFO" />
 
 

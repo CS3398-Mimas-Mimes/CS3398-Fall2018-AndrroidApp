@@ -7,10 +7,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.content.Intent;
+import android.widget.Toast;
 
 public class HomePageActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+    private static String id;
+    //String id;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -37,12 +40,35 @@ public class HomePageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+        Intent intent = getIntent();
+        id = intent.getStringExtra("id");
+
         mTextMessage = (TextView) findViewById(R.id.message);
     }
 
     public void goToLogin(View view){
         Intent startLogin = new Intent(this, Login.class);
         startActivity(startLogin);
+    }
+     public void goToMenu(View view){
+        Intent startMenu = new Intent(this, Menu.class);
+        startActivity(startMenu);
+    }
+
+    public void goToUser(View view){
+        Intent startUser = new Intent(this, User.class);
+        //Toast.makeText(getApplicationContext(), String.format("Passing in ID to User: %s", id), Toast.LENGTH_LONG).show();
+        //startUser.putExtra("id", id);
+        startActivity(startUser);
+    }
+
+    public void goToInfo(View view){
+        Intent startInfo = new Intent(this, Info.class);
+        startActivity(startInfo);
+    }
+
+    public static String getId() {
+        return id;
     }
 
     public void goToInfo(View view){

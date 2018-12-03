@@ -38,6 +38,8 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
 
         JsonArrayRequest request = new JsonArrayRequest(
                 Request.Method.GET,
@@ -52,7 +54,7 @@ public class Menu extends AppCompatActivity {
                         // Process the JSON
                         try{
                             // Loop through the array elements
-                            Toast.makeText(getApplicationContext(), String.format("Length of request: %d", response.length()), Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(), String.format("Length of request: %d", response.length()), Toast.LENGTH_LONG).show();
                             JSONObject menuItem;
                             for(int i=0;i<response.length();i++){
                                 // Get current json object
@@ -60,9 +62,9 @@ public class Menu extends AppCompatActivity {
 
                                 // Get the current student (json object) data
                                 String mealNum = menuItem.getString("foodId");
-                                Toast.makeText(getApplicationContext(), String.format("FoodId: %s", mealNum), Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(getApplicationContext(), String.format("FoodId: %s", mealNum), Toast.LENGTH_SHORT).show();
                                 String food = menuItem.getString("foodName");
-                                Toast.makeText(getApplicationContext(), String.format("Food: %s", food), Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(getApplicationContext(), String.format("Food: %s", food), Toast.LENGTH_SHORT).show();
                                 String price = menuItem.getString("price");
 
                                 // Display the formatted json data in text view
@@ -71,14 +73,13 @@ public class Menu extends AppCompatActivity {
                                 //Toast.makeText(getApplicationContext(), data, Toast.LENGTH_LONG).show();
                             }
                             results = (TextView) findViewById(R.id.jsonData);
-                            Toast.makeText(getApplicationContext(), data, Toast.LENGTH_LONG).show();
+                            //Toast.makeText(getApplicationContext(), data, Toast.LENGTH_LONG).show();
                             results.setText(data);
                         }catch (JSONException e){
                             e.printStackTrace();
                         }
                     }
                 },
-
                 new Response.ErrorListener(){
                     @Override
                     public void onErrorResponse(VolleyError error){
@@ -89,7 +90,7 @@ public class Menu extends AppCompatActivity {
         );
 
         //Log.i("Menu", "Created Successfully.");
-        Toast.makeText(getApplicationContext(), String.format("Request: %s", request.toString()), Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), String.format("Request: %s", request.toString()), Toast.LENGTH_LONG).show();
         this.requestQueue = Volley.newRequestQueue(this);
         //this.results = (TextView) findViewById(R.id.jsonData);
         //Toast.makeText(getApplicationContext(), data, Toast.LENGTH_LONG).show();

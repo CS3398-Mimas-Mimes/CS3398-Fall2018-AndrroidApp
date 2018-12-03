@@ -5,50 +5,50 @@
     android:id="@+id/constraintLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="#501214"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     android:background="#FF4447"
-    >
+    tools:layout_editor_absoluteY="81dp">
     <!-- Colored gradient background -->
 
-    <EditText
+    <!-- was EditText -->
+    <TextView
         android:id="@+id/editText4"
-        android:layout_width="273dp"
-        android:layout_height="44dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:ems="10"
-        android:textColor="#8d734a"
         android:inputType="textPersonName"
         android:text="12341233412341234"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        android:textColor="#8d734a"
+        app:layout_constraintStart_toStartOf="@+id/editText3"
+        app:layout_constraintTop_toBottomOf="@+id/editText3"
+        tools:textSize="18sp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="80dp"
-        android:layout_height="46dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Credit Card:"
         android:textColor="#8d734a"
-        android:text="Credit Card"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:textSize="18sp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="215dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="14dp"
         android:adjustViewBounds="true"
         android:contentDescription="TODO"
         android:src="@drawable/profile_picture"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <!-- Circle Profile Picture -->
 
@@ -56,74 +56,75 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="81dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="11dp"
         android:text="Email"
         android:textColor="#8d734a"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintEnd_toStartOf="@+id/edit_button"
+        app:layout_constraintStart_toStartOf="@+id/imageView" />
 
-    <EditText
+    <!-- Was EditText -->
+    <TextView
         android:id="@+id/editText2"
-        android:layout_width="271dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:layout_marginTop="233dp"
         android:textColor="#8d734a"
-        android:text="email@example.com"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
-        app:layout_constraintHorizontal_bias="0.858"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/editText3"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="80dp"
-        android:layout_height="46dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
-        android:textColor="#8d734a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="11dp"
         android:text="Mobile number"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="273dp"
-        android:layout_height="44dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
         android:textColor="#8d734a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        tools:textSize="18sp" />
+
+    <!-- Was EditText -->
+    <TextView
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="37dp"
+        android:ems="10"
         android:inputType="textPersonName"
-        android:text="123-456-7891"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        android:textColor="#8d734a"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3"
+        tools:textSize="18sp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Favorites"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="66dp"
+        android:background="#8d734a"
         android:onClick="goToOrders"
+        android:text="Favorites"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87"
-        android:background="#8d734a"/>
+        app:layout_constraintEnd_toEndOf="@+id/edit_button" />
+
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#8d734a"
+        android:onClick="goToEdit"
+        android:text="Edit Account"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
