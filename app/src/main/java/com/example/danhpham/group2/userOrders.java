@@ -39,6 +39,7 @@ public class userOrders extends AppCompatActivity {
         Intent intent = getIntent();
         id = intent.getStringExtra("id");
 
+        orderList = "";
         StringRequest request = new StringRequest(Request.Method.POST, "http://dmp131.tech/display_orders_danh.php",
                 new Response.Listener<String>() {
                     @Override
