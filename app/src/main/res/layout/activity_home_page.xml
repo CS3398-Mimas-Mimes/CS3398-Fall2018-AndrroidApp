@@ -45,7 +45,6 @@
             android:layout_marginBottom="36dp"
             android:background="#8d734a"
             android:ems="10"
-            android:onClick="goToInfo"
             android:linksClickable="true"
             android:longClickable="true"
             android:onClick="goToInfo"
