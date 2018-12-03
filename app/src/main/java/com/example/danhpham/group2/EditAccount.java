@@ -44,7 +44,7 @@ public class EditAccount extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 editAccount();
-                sendEmail(email.getText().toString());
+                //sendEmail(email.getText().toString());
             }
         });
     }
