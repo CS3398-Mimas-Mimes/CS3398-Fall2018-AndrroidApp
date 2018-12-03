@@ -33,8 +33,8 @@ public class cart extends AppCompatActivity {
 
 
         creditCard = (EditText) findViewById(R.id.input_creditCard);
-        int id;
-        HomePageActivity.getId
+        String id;
+        id = HomePageActivity.getId();
 
 
     }

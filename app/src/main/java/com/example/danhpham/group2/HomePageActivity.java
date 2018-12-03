@@ -71,18 +71,5 @@ public class HomePageActivity extends AppCompatActivity {
         return id;
     }
 
-    public void goToInfo(View view){
-        Intent startLogin = new Intent(this, Info.class);
-        startActivity(startLogin);
-    }
-
-    public void goToUser(View view){
-        Intent startLogin = new Intent(this, User.class);
-        startActivity(startLogin);
-    }
-
-    public void goToMenu(View view){
-        Intent startLogin = new Intent(this, Menu.class);
-        startActivity(startLogin);
-    }
+    
 }
