@@ -64,18 +64,6 @@
             android:textAppearance="@android:style/TextAppearance" />
 
         <Button
-            android:id="@+id/buttonMain"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:background="#8d734a"
-            android:linksClickable="true"
-            android:onClick="goToMain"
-            android:padding="12dp"
-            android:text="Home"
-            android:textAppearance="@android:style/TextAppearance" />
-
-        <Button
             android:id="@+id/buttonSighup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

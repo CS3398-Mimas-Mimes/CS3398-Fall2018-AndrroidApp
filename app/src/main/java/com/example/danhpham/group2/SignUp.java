@@ -28,6 +28,7 @@ public class SignUp extends Activity {
 
     EditText firstName, lastName, userName, phone, email, password;
     Button signup;
+    private static String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +67,9 @@ public class SignUp extends Activity {
                     public void onResponse(String response) {
                         //Toast.makeText(getApplicationContext(), "this is reponses" + response, Toast.LENGTH_SHORT).show();
                         if (response.contains("1")){
-                            startActivity(new Intent(getApplicationContext(),HomePageActivity.class));
+                            String arr[] = response.split(",");
+                            Intent intent = new Intent(getApplicationContext(),Login.class);
+                            startActivity(intent);
                         }else{
                             Toast.makeText(getApplicationContext(), "Not successful!!!!!!",
                                     Toast.LENGTH_SHORT).show();
