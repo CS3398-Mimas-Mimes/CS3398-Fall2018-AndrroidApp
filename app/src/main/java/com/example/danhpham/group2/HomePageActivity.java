@@ -42,7 +42,6 @@ public class HomePageActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         id = intent.getStringExtra("id");
-
         mTextMessage = (TextView) findViewById(R.id.message);
     }
 

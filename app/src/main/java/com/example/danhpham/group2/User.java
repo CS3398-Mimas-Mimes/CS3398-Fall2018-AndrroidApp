@@ -30,7 +30,7 @@ import com.android.volley.toolbox.StringRequest;
 
 public class User extends AppCompatActivity {
 
-    String id;
+    private static String id;
     TextView email, phone, name;
 
     @Override

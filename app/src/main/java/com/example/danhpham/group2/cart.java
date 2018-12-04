@@ -75,8 +75,10 @@ public class cart extends AppCompatActivity {
                         //Toast.makeText(getApplicationContext(), "this is reponses" + response, Toast.LENGTH_SHORT).show();
                         if (response.contains("1")){
                             // Response returns "1 {id}"
-                            Intent startMain = new Intent(getApplicationContext(), HomePageActivity.class);
-                            startActivity(startMain);
+                            Intent intent = new Intent(getApplicationContext(), HomePageActivity.class);
+                            intent.putExtra("id", id);
+                            System.out.println("ID: " + id);
+                            startActivity(intent);
                             //startActivity(new Intent(getApplicationContext(),HomePageActivity.class));
                         }else{
                             Toast.makeText(getApplicationContext(), "Cannot connect to server",
