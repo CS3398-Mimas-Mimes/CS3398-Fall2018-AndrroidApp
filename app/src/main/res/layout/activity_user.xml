@@ -39,33 +39,38 @@
         android:layout_marginTop="172dp"
         android:textColor="#8d734a"
         android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="192dp" />
 
     <!-- Was EditText -->
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="66dp"
-        android:background="#8d734a"
-        android:onClick="goToOrders"
-        android:text="Favorites"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/edit_button" />
-
-    <Button
         android:id="@+id/edit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:background="#8d734a"
         android:onClick="goToEdit"
         android:text="Edit Account"
         app:layout_constraintBaseline_toBaselineOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.765"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="64dp"
+        android:background="#8d734a"
+        android:onClick="goToOrders"
+        android:text="Favorites"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edit_button"
+        app:layout_constraintHorizontal_bias="0.339"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -76,11 +81,12 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="274dp"
-        android:text="Name"
-        android:textAlignment="viewEnd"
+        android:text="Name:"
+        android:textAlignment="viewStart"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView10"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -89,7 +95,6 @@
         android:layout_width="280dp"
         android:layout_height="40dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="160dp"
         android:text="TextView"
         android:textAlignment="viewStart"
         android:textSize="20sp"
@@ -107,8 +112,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="16dp"
-        android:text="Phone"
-        android:textAlignment="viewEnd"
+        android:text="Phone:"
+        android:textAlignment="viewStart"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/textView13"
         app:layout_constraintEnd_toStartOf="@+id/textView12"
@@ -138,8 +143,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="138dp"
-        android:text="Email"
-        android:textAlignment="viewEnd"
+        android:text="Email:"
+        android:textAlignment="viewStart"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView14"
