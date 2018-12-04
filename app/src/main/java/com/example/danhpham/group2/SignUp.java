@@ -26,7 +26,7 @@ import android.content.pm.PackageInstaller.Session;
 
 public class SignUp extends Activity {
 
-    EditText firstName, lastName, userName, phone, email, password;
+    EditText firstName, lastName, userName, phone, email, password, Cpassword;
     Button signup;
     private static String id;
 
@@ -43,17 +43,32 @@ public class SignUp extends Activity {
         email = (EditText) findViewById(R.id.input_email);
         password = (EditText) findViewById(R.id.input_password);
         signup = (Button) findViewById(R.id.btn_signup);
+        Cpassword = (EditText) findViewById(R.id.confirm_password);
 
         // Connecting button variable to frame work
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setSignup();
-                sendEmail(email.getText().toString());
+                if(checkPassword()){
+                    setSignup();
+                    sendEmail(email.getText().toString());
+                }
+                else
+                    Toast.makeText(getApplicationContext(), "Passwords do not match!", Toast.LENGTH_SHORT).show();
+                //setSignup();
+                //sendEmail(email.getText().toString());
             }
         });
 
     }
+
+    public boolean checkPassword(){
+        if (password.getText().toString().equals(Cpassword.getText().toString())){
+            return true;
+        }
+        return false;
+    }
+
     public void goToMain(View view) {
         Intent startMain = new Intent(this, HomePageActivity.class);
         startActivity(startMain);
