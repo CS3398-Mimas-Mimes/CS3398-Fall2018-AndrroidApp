@@ -48,7 +48,9 @@ public class cart extends AppCompatActivity {
         subPrice.setText(Double.toString(price));
 
         total = price * 1.085;
-        totalPrice.setText(Double.toString(total));
+        String totalString = String.format("%.2f", total);
+        //totalPrice.setText(Double.toString(total));
+        totalPrice.setText(totalString);
 
 
         creditCard = (EditText) findViewById(R.id.editText);
