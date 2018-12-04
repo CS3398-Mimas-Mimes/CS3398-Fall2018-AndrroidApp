@@ -9,7 +9,7 @@ We connected frontend and backend parts. The app now can login and signup. Upon 
 * Alexander Muyshondt: Polish up user profile page and help connect existing frontend with backend for sprint 3.
 
 # How to run the app.
- - Download the file <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/tree/master/apk">Mimas_11_07.apk</a> to your android phones.
+ - Download the file <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/tree/master/apk">app-debug.apk</a> to your android phones.
  - Install and run this app in your android phones
  - Current features of app: Login, SignUp (You will receive an confirmation email if you enter a valid email)
 
