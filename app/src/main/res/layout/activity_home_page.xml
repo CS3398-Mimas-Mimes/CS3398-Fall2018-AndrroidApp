@@ -52,7 +52,7 @@
 
 
         <Button
-            android:id="@+id/logInText"
+            android:id="@+id/bSignout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="36dp"
@@ -61,7 +61,7 @@
             android:linksClickable="true"
             android:longClickable="true"
             android:onClick="goToLogin"
-            android:text="LOG IN" />
+            android:text="SIGN OUT" />
 
 
     </LinearLayout>
