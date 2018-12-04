@@ -33,6 +33,8 @@ public class Menu extends AppCompatActivity {
     String data = "Current Menu:\n\n\n";
     RequestQueue requestQueue;
     TextView results;
+    String orderItem = "";
+    double orderPrice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,25 +118,30 @@ public class Menu extends AppCompatActivity {
         //Intent i=new Intent(this, cart.class);
         int size = 0;
         String[] Orders = new String[4];
+        double[] foodPrice = new double[4];
         //ArrayList<String> orders = new ArrayList<>();
         if(burger.isChecked()) {
             //orders.add("Hamburger");
             Orders[0] = "Hamburger";
+            foodPrice[0] = 8.99;
             size++;
         }
         if(chickenStrips.isChecked()) {
             //orders.add("Chicken Strips");
             Orders[1] = "Chicken Strips";
+            foodPrice[1] = 7.99;
             size++;
         }
         if(loadedFries.isChecked()) {
             //orders.add("Loaded Fries");
             Orders[2] = "Loaded Fries";
+            foodPrice[2] = 3.99;
             size++;
         }
         if(vanillaShake.isChecked()) {
             //orders.add("Vanilla Shake");
             Orders[3] = "Vanilla Shake";
+            foodPrice[3] = 1.99;
         }
         Intent i = new Intent(getApplicationContext(),cart.class);
         //Bundle bundle = new Bundle();
@@ -142,12 +149,17 @@ public class Menu extends AppCompatActivity {
 
         for(int inc = 0; inc < Orders.length; inc++){
             if (Orders[inc] != null){
-                i.putExtra("order", Orders[inc]);
+                //i.putExtra("order", Orders[inc]);
+                orderItem = "" + Orders[inc];
+                orderPrice = foodPrice[inc];
+                 break;
             }
         }
+        i.putExtra("orderItem", orderItem);
+        i.putExtra("orderPrice", orderPrice);
         startActivity(i);
         System.out.println(Orders); //for reference
-        Intent startCart = new Intent(this, cart.class);
-        startActivity(startCart);
+        //Intent startCart = new Intent(this, cart.class);
+        //startActivity(startCart);
     }
 }
