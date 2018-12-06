@@ -9,6 +9,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical">
     <!-- Colored gradient background -->
+        <!-- Colored gradient background -->
 
     <ImageView
         android:id="@+id/imageView"
