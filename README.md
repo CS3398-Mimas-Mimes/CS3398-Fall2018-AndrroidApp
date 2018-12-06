@@ -37,6 +37,6 @@ Zak King
 
 Alexander Muyshondt
 - Created the user <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/res/layout/activity_user.xml">profile page</a>, including user avatar and user-specific attributes such as username, password, credit card information and Favorites button. 
-- Created the <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/res/layout/activity_edit_account.xml">edit account layout xml file</a>
+- Created the <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/res/layout/activity_edit_account.xml">edit account layout xml file</a>.
 - For Sprint 3, functionality was added for the user to change their credit card information and look at their favorite meals using the button in their profile.
-- If there was another Sprint, more fields may be added to the user account as well as the option to edit the user porfile picture.
+- If there was another Sprint, more fields may be added to the user account as well as the option to edit the user profile picture.
