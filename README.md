@@ -30,8 +30,8 @@ Le Cuong
 
 
 Zak King 
- - I created the <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/res/layout/activity_menu.xml">Menu</a> and the <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/res/layout/activity_cart.xml">Cart page</a> 
-  -I also created some backend information processing before information is sent to the database for the  <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/java/com/example/danhpham/group2/Menu.java">Menu</a> <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/java/com/example/danhpham/group2/cart.java">Cart</a> pages, in collaboration with Andrew and Danh respectively. 
+ - I created the <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/res/layout/activity_menu.xml">Menu</a> and the <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/res/layout/activity_cart.xml">Cart page.</a> 
+ - I also created some backend information processing before information is sent to the database for the  <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/java/com/example/danhpham/group2/Menu.java">Menu</a> <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/java/com/example/danhpham/group2/cart.java">Cart</a> pages, in collaboration with Andrew and Danh respectively. 
 
 
 Alexander Muyshondt
