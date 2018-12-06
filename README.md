@@ -5,7 +5,7 @@ We connected frontend and backend parts. The app now can login and signup. Upon 
 * Andrew Hyatt: Assisting Danh with integrating orders and payments to our application, as well as continuing customer reward functionality. Will also attempt to improve the email that is sent to users that register for an account to include more information and not be sent to spam.
 * Danh Pham: Make the database for orders and payments, and connects those databases with Android App
 * Le Cuong: Design the Homepage and Menu, link these bottons to the logging page
-* Zak King: Polish GUI and work with backend to implement all features layed out in the front end pages. 
+* Zak King: Worked with Andrew on the layout of the menu. I also worked with Danh on the cart page.
 * Alexander Muyshondt: Polish up user profile page and help connect existing frontend with backend for sprint 3.
 
 # How to run the app.
@@ -29,7 +29,7 @@ Le Cuong
   
 
 
-Zak King - Created the <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/zacharyking2016/app/src/main/res/layout/activity_info.xml">Information page</a> and the <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/zacharyking2016/app/src/main/res/layout/activity__user_orders.xml">Favorites page</a> as well as creating all the functions to make the <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/tree/zacharyking2016/app/src/main/java/com/example/danhpham/group2">Buttons</a> to work on all of the front end pages
+Zak King - Created the <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/zacharyking2016/app/src/main/res/layout/activity_menu.xml">Menu</a> and the <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/zacharyking2016/app/src/main/res/layout/activity__cart.xml">Cart page</a> as well as creating some backend information processing before information is sent to the database for the  <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/java/com/example/danhpham/group2/Menu.java">Menu</a> <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/java/com/example/danhpham/group2/cart.java">Cart</a> pages, in collaboration with Andrew and Danh respectively. 
 
 
 Alexander Muyshondt
