@@ -9,10 +9,18 @@ We connected frontend and backend parts. The app now can login, signup, order, c
 * Zak King: Status - Worked with Andrew on the layout of the menu. I also worked with Danh on the cart page. My next step would be to reorganize the user interface for our app, specifically making the menu and cart pages look even better.
 * Alexander Muyshondt: Status - Polished up user profile page and helped connect existing frontend with backend for sprint 3. My next step would be to edit the layout of the user profile page, and make the elements flow better.
 
-# How to run the app.
+# How to run the app (for Android device)
  - Download the file <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/tree/master/apk">Mimas_12_04.apk</a> to your android phones.
  - Install and run this app in your android phones
  - Current features of app: Login, SignUp (You will receive an confirmation email if you enter a valid email), Order (One item at a time), Payment, Order History and Editing Account.
+ 
+# How to build and run the app (with Android Studio)
+- Only other way to build and run program is with Android Studio. Make sure to download Android Studio and install.
+- Copy this GitHub repository using GitHub Desktop. 
+- Change directory to this repository, and make sure current branch is master (should be by default).
+- Open Android Studio, click the build icon (which appears like a hammer - similar to other IDEs).
+- Once progress shows successful build, click the green play button, and download an emulator (suggested APIs are either 22 or 24). This will automatically run our app on the emulator once it finishes downloading and installing. Enjoy!
+Note: If build does not succeed, likely cause is a dependency issue with Android Studio on your personal device. Some of our group members faced this issue while others did not.
 
 # Individual (Artifact References and Proof of Work)
 Andrew Hyatt
