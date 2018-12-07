@@ -3,11 +3,11 @@
 # Status of Project
 We connected frontend and backend parts. The app now can login, signup, order, check the order history and edit the user acccount. Upon signing up, new users will recieve a confirmation email. On the frontend we also added a user, menu, information and favorites page, and added backend information processing. We also have an offsite database that stores all of our user and item information. Our efforts to accomplish this are detailed below:
 
-* Andrew Hyatt: Assisting Danh with integrating orders and payments to our application, as well as continuing customer reward functionality. Will also attempt to improve the email that is sent to users that register for an account to include more information and not be sent to spam.
-* Danh Pham: Split the order database to smaller parttern: order and payment. Configurate to order multiple food.
-* Le Cuong: Design the Homepage and Menu, link these bottons to the logging page
-* Zak King: Worked with Andrew on the layout of the menu. I also worked with Danh on the cart page.
-* Alexander Muyshondt: Polish up user profile page and help connect existing frontend with backend for sprint 3.
+* Andrew Hyatt: Status - During sprint 3 I was able to add order history for each customer, as well as the ability to edit information. My next steps would be to add more information to customer profile page, and allow customers to edit more information than just email and phone number.
+* Danh Pham: Status - Completed sprint 3 work, which included adding orders to backend, as well as assist Andrew with editing customer information. My next step would be to split the order database to smaller parttern: order and payment. Configurate to order multiple food.
+* Le Cuong: Status - Designed the Homepage and Menu, as well as linked these buttons to the log in page. My next step would be to alter the color scheme of our app, as it seemed to be difficult to read at times during our demo.
+* Zak King: Status - Worked with Andrew on the layout of the menu. I also worked with Danh on the cart page. My next step would be to reorganize the user interface for our app, specifically making the menu and cart pages look even better.
+* Alexander Muyshondt: Status - Polished up user profile page and helped connect existing frontend with backend for sprint 3. My next step would be to edit the layout of the user profile page, and make the elements flow better.
 
 # How to run the app.
  - Download the file <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/tree/master/apk">Mimas_12_04.apk</a> to your android phones.
