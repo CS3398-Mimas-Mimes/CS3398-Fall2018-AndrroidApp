@@ -35,7 +35,8 @@ Danh Pham
 
 Le Cuong 
   - I woked on the Homepage and add some items to Menu, also connect them to logging page  <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/zacharyking2016/app/src/main/java/com/example/danhpham/group2/HomePageActivity.java">Homepage.java</a> and  <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/zacharyking2016/app/src/main/java/com/example/danhpham/group2/Menu.java">Menu.java</a>
-  
+  - I also worked on the Signup Page to add more password field and worked along with Alex at Frontend <a href="https://github.com/CS3398-Mimas-Mimes/CS3398-Fall2018-AndrroidApp/blob/master/app/src/main/java/com/example/danhpham/group2/SignUp.java"> SignUp.java</a>
+   
 
 
 Zak King 
